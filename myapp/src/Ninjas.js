@@ -1,23 +1,23 @@
 import React from 'react'
 
-const Ninjas = ({ninjas}) => {
+const Ninjas = ({ ninjas }) => {
 
-  // const { ninjas } = this.props;
-  const ninjaList = ninjas.map(ninja => {
+    // const { ninjas } = this.props;
+    const ninjaList = ninjas.filter(ninja => ninja.age > 20).map(ninja => {
+        return (
+            <div className="ninja" key={ninja.id}>
+                <div>Name: {ninja.name}</div>
+                <div>Age: {ninja.age}</div>
+                <div>Belt: {ninja.belt}</div>
+            </div>
+        )
+    });
+
     return (
-      <div className="ninja" key={ninja.id}>
-        <div>Name: { ninja.name }</div>
-        <div>Age: { ninja.age }</div>
-        <div>Belt: { ninja.belt }</div>
-      </div>
-    )
-  });
-
-  return (
-    <div className="ninja-list">
-      { ninjaList }
-    </div>
-  );
+        <div className="ninja-list">
+            { ninjaList}
+        </div>
+    );
 
 }
 
