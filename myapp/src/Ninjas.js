@@ -16,7 +16,6 @@ const Ninjas = ({ ninjas }) => {
     //     }
     // });
 
-
     return (
         <div className="ninja-list">
             {
