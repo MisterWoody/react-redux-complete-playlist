@@ -10,12 +10,16 @@ class App extends Component {
       { name: 'Crystal', age: 25, belt: 'pink', id: 3 }
     ]
   }
+
+  addNinja = (ninja) => {
+    console.log(ninja);
+  }
   render() {
     return (
       <div className="App">
         <h1>My first React app</h1>
-        <Ninjas ninjas={this.state.ninjas}/>
-        <AddNinja />
+        <Ninjas ninjas={this.state.ninjas} />
+        <AddNinja addNinja={this.addNinja} />
       </div>
     );
   }
