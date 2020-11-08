@@ -5,6 +5,8 @@
 
 # testing
 /poketimes/coverage
+/myapp/node_modules
+/todoapp/node_modules
 
 # production
 /poketimes/build
